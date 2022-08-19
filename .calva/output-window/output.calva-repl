@@ -1,0 +1,406 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.9.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉moments.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+moment-durations
+; Error printing return value (ClassCastException) at java-time.temporal/eval2134$fn (temporal.clj:299).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.time.temporal.Temporal (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.time.temporal.Temporal is in module java.base of loader 'bootstrap')
+clj꞉moments.core꞉> 
+#'moments.core/moment-durations
+clj꞉moments.core꞉> (moment-durations)
+; Execution error (ClassCastException) at moments.core/eval11981 (form-init3796901982107447055.clj:36).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+moment-durations
+; Error printing return value (ClassCastException) at java-time.temporal/eval2134$fn (temporal.clj:299).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.time.temporal.Temporal (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.time.temporal.Temporal is in module java.base of loader 'bootstrap')
+clj꞉moments.core꞉> 
+#'moments.core/moment-durations
+clj꞉moments.core꞉> 
+moment-durations
+; Error printing return value (ClassCastException) at java-time.temporal/eval2134$fn (temporal.clj:299).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.time.temporal.Temporal (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.time.temporal.Temporal is in module java.base of loader 'bootstrap')
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> moment-dates
+[{:title "Started Dating Bri", :date #object[java.time.LocalDate 0x741e05b3 "2009-08-14"]}
+ {:title "Started Working", :date #object[java.time.LocalDate 0x72b99faa "2013-08-01"]}
+ {:title "Married Bri", :date #object[java.time.LocalDate 0x24c836bf "2014-01-25"]}
+ {:title "Bought First Home", :date #object[java.time.LocalDate 0x73f2a026 "2014-11-14"]}
+ {:title "Addi Born", :date #object[java.time.LocalDate 0x3488627b "2019-03-02"]}
+ {:title "Demi Born", :date #object[java.time.LocalDate 0x69ce5b02 "2021-10-01"]}
+ {:title "Bought Second Home", :date #object[java.time.LocalDate 0x31d07bef "2009-08-14"]}]
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+#'moments.core/moment-durations
+clj꞉moments.core꞉> moment-durations
+; Error printing return value (ClassCastException) at java-time.temporal/eval2134$fn (temporal.clj:299).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.time.temporal.Temporal (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.time.temporal.Temporal is in module java.base of loader 'bootstrap')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+#'moments.core/calculate-duration
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+#function[clojure.core/map/fn--5931]
+nil
+clj꞉moments.core꞉> 
+(print (calculate-duration moment-dates now))
+#function[clojure.core/map/fn--5931]
+nil
+clj꞉moments.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.9.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉moments.core꞉> 
+; Jack-in done.
+clj꞉moments.core꞉> 
+; Syntax error compiling at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:24:3).
+; No such namespace: jt
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+0
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:19:28).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:19:28).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:19:28).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:19:28).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+#'moments.core/calculate-moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+{:title Started Dating Bri, :date #object[java.time.LocalDate 0x1fa5b8d4 2009-08-14]}{:title Started Working, :date #object[java.time.LocalDate 0x792837a4 2013-08-01]}{:title Married Bri, :date #object[java.time.LocalDate 0x757c30df 2014-01-25]}{:title Bought First Home, :date #object[java.time.LocalDate 0x3245f6c8 2014-11-14]}{:title Addi Born, :date #object[java.time.LocalDate 0x948b4c 2019-03-02]}{:title Demi Born, :date #object[java.time.LocalDate 0x38b919ed 2021-10-01]}{:title Bought Second Home, :date #object[java.time.LocalDate 0x2cd72ced 2009-08-14]}(nil
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                               nil
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     nil
+                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                   nil
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     nil
+                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                       nil
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     nil)
+nil
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+{:title "Started Dating Bri",
+ :date #object[java.time.LocalDate 0x3322a7d0 "2009-08-14"]}
+{:title "Started Working",
+ :date #object[java.time.LocalDate 0x44da69f3 "2013-08-01"]}
+{:title "Married Bri",
+ :date #object[java.time.LocalDate 0x2f3caa86 "2014-01-25"]}
+{:title "Bought First Home",
+ :date #object[java.time.LocalDate 0x524215cd "2014-11-14"]}
+{:title "Addi Born",
+ :date #object[java.time.LocalDate 0x43d6da25 "2019-03-02"]}
+{:title "Demi Born",
+ :date #object[java.time.LocalDate 0x37efb8ac "2021-10-01"]}
+{:title "Bought Second Home",
+ :date #object[java.time.LocalDate 0x3618f16d "2009-08-14"]}
+(nil nil nil nil nil nil nil)
+nil
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core꞉> 
+#'moments.core/now
+clj꞉moments.core꞉> 
+#'moments.core/moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date #object[java.time.LocalDate 0x2972dbaa "2009-08-14"],
+  :duration #object[java.time.LocalDate 0x4003c6d5 "2022-08-20"]}
+ {:title "Started Working",
+  :date #object[java.time.LocalDate 0x565dab0d "2013-08-01"],
+  :duration #object[java.time.LocalDate 0x606c4200 "2022-08-20"]}
+ {:title "Married Bri",
+  :date #object[java.time.LocalDate 0x16b2c671 "2014-01-25"],
+  :duration #object[java.time.LocalDate 0x665d215b "2022-08-20"]}
+ {:title "Bought First Home",
+  :date #object[java.time.LocalDate 0x70c83233 "2014-11-14"],
+  :duration #object[java.time.LocalDate 0x4497840b "2022-08-20"]}
+ {:title "Addi Born",
+  :date #object[java.time.LocalDate 0x27586374 "2019-03-02"],
+  :duration #object[java.time.LocalDate 0x67a6b785 "2022-08-20"]}
+ {:title "Demi Born",
+  :date #object[java.time.LocalDate 0x34003120 "2021-10-01"],
+  :duration #object[java.time.LocalDate 0x4ede95b6 "2022-08-20"]}
+ {:title "Bought Second Home",
+  :date #object[java.time.LocalDate 0xecd0247 "20
+09-08-14"],
+  :duration #object[java.time.LocalDate 0x6f3025c8 "2022-08-20"]})
+nil
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+; Execution error (ClassCastException) at moments.core/calculate-moment-dates$fn (form-init8471201141672060908.clj:19).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+; Execution error (ClassCastException) at moments.core/calculate-moment-dates$fn (form-init8471201141672060908.clj:19).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+[
+; Execution error (ClassCastException) at moments.core/calculate-moment-dates$fn (form-init8471201141672060908.clj:19).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+; Syntax error compiling at (c:\Users\GGPC\Documents\Workspace\moments\src\moments\core.clj:19:60).
+; Unable to resolve symbol: % in this context
+clj꞉moments.core꞉> 
+; Error printing return value (ClassCastException) at moments.core/calculate-moment-dates$fn (form-init8471201141672060908.clj:19).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/calculate-moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/calculate-moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/calculate-moment-dates
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+; Execution error (ClassCastException) at moments.core/-main (form-init8471201141672060908.clj:23).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+now
+#object[java.time.LocalDate 0x17a24afe "2022-08-20"]
+clj꞉moments.core꞉> 
+moment-dates
+[{:title "Started Dating Bri", :date #object[java.time.LocalDate 0x2c355922 "2009-08-14"]}
+ {:title "Started Working", :date #object[java.time.LocalDate 0x31465bf0 "2013-08-01"]}
+ {:title "Married Bri", :date #object[java.time.LocalDate 0x1163d088 "2014-01-25"]}
+ {:title "Bought First Home", :date #object[java.time.LocalDate 0x59b31fe2 "2014-11-14"]}
+ {:title "Addi Born", :date #object[java.time.LocalDate 0x70ad4390 "2019-03-02"]}
+ {:title "Demi Born", :date #object[java.time.LocalDate 0x6d504c90 "2021-10-01"]}
+ {:title "Bought Second Home", :date #object[java.time.LocalDate 0x68f0fdef "2009-08-14"]}]
+clj꞉moments.core꞉> 
+(now)
+; Execution error (ClassCastException) at moments.core/eval12257 (form-init8471201141672060908.clj:288).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+(now)
+; Execution error (ClassCastException) at moments.core/eval12259 (form-init8471201141672060908.clj:292).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(now)
+; Execution error (ClassCastException) at moments.core/eval12264 (form-init8471201141672060908.clj:298).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+(-main)
+; Execution error (ClassCastException) at moments.core/calculate-moment-dates$fn (form-init8471201141672060908.clj:19).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+now
+#object[java.time.LocalDate 0x17a24afe "2022-08-20"]
+clj꞉moments.core꞉> 
+(now)
+; Execution error (ClassCastException) at moments.core/eval12268 (form-init8471201141672060908.clj:309).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+moment-dates
+[{:title "Started Dating Bri", :date #object[java.time.LocalDate 0x2c355922 "2009-08-14"]}
+ {:title "Started Working", :date #object[java.time.LocalDate 0x31465bf0 "2013-08-01"]}
+ {:title "Married Bri", :date #object[java.time.LocalDate 0x1163d088 "2014-01-25"]}
+ {:title "Bought First Home", :date #object[java.time.LocalDate 0x59b31fe2 "2014-11-14"]}
+ {:title "Addi Born", :date #object[java.time.LocalDate 0x70ad4390 "2019-03-02"]}
+ {:title "Demi Born", :date #object[java.time.LocalDate 0x6d504c90 "2021-10-01"]}
+ {:title "Bought Second Home", :date #object[java.time.LocalDate 0x68f0fdef "2009-08-14"]}]
+clj꞉moments.core꞉> 
+(jt/time-between now now)
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:322:1).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+(jt/time-between (now) (now))
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:326:1).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+(jt/time-between (jt/local-date) (jt/local-date))
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:330:1).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(jt/time-between (jt/local-date) (jt/local-date))
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:336:1).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+(jt/time-between (jt/local-date) (jt/local-date) :days)
+0
+clj꞉moments.core꞉> 
+(jt/time-between (now) (now) :days)
+; Execution error (ClassCastException) at moments.core/eval12291 (form-init8471201141672060908.clj:343).
+; class java.time.LocalDate cannot be cast to class clojure.lang.IFn (java.time.LocalDate is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉moments.core꞉> 
+(jt/time-between now now :days)
+0
+clj꞉moments.core꞉> 
+(jt/time-between now (get moment-dates 1 :date) :days)
+; Execution error (ClassCastException) at java-time.temporal/eval2134$fn (temporal.clj:299).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.time.temporal.Temporal (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.time.temporal.Temporal is in module java.base of loader 'bootstrap')
+clj꞉moments.core꞉> 
+(get moment-dates 1)
+{:title "Started Working", :date #object[java.time.LocalDate 0xbba00a1 "2013-08-01"]}
+clj꞉moments.core꞉> 
+(get moment-dates 1 :date)
+{:title "Started Working", :date #object[java.time.LocalDate 0xbba00a1 "2013-08-01"]}
+clj꞉moments.core꞉> 
+(get moment-dates 1 (get :date))
+; Execution error (ArityException) at moments.core/eval12301 (form-init8471201141672060908.clj:360).
+; Wrong number of args (1) passed to: clojure.core/get
+clj꞉moments.core꞉> 
+(get moment-dates 1 (get % :date))
+; Syntax error compiling at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:364:21).
+; Unable to resolve symbol: % in this context
+clj꞉moments.core꞉> 
+(get (get moment-dates 1) :date)
+#object[java.time.LocalDate 0xbba00a1 "2013-08-01"]
+clj꞉moments.core꞉> 
+(jt/time-between now (get (get moment-dates 1) :date))
+; Syntax error (IllegalArgumentException) compiling jt/time-between at (c:\Users\GGPC\Documents\Workspace\moments\.calva\output-window\output.calva-repl:371:1).
+; No single method: time_between of interface: java_time.core.KnowsTimeBetween found for function: time-between of protocol: KnowsTimeBetween
+clj꞉moments.core꞉> 
+(jt/time-between now (get (get moment-dates 1) :date) :days)
+-3306
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date #object[java.time.LocalDate 0x3f9bc015 "2009-08-14"],
+  :duration -4754}
+ {:title "Started Working",
+  :date #object[java.time.LocalDate 0x3cb04743 "2013-08-01"],
+  :duration -3306}
+ {:title "Married Bri",
+  :date #object[java.time.LocalDate 0x53e8d1f8 "2014-01-25"],
+  :duration -3129}
+ {:title "Bought First Home",
+  :date #object[java.time.LocalDate 0x366756a2 "2014-11-14"],
+  :duration -2836}
+ {:title "Addi Born",
+  :date #object[java.time.LocalDate 0x3e075267 "2019-03-02"],
+  :duration -1267}
+ {:title "Demi Born",
+  :date #object[java.time.LocalDate 0x1160f02d "2021-10-01"],
+  :duration -323}
+ {:title "Bought Second Home",
+  :date #object[java.time.LocalDate 0x7549be60 "2009-08-14"],
+  :duration -4754})
+nil
+clj꞉moments.core꞉> 
+; nREPL Connection was closed
