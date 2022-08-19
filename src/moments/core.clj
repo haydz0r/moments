@@ -3,7 +3,7 @@
   (:require [java-time :as jt])
   (:require [clojure.pprint :as pp]))
 
-(def moment-dates 
+(def moments 
   [{:title "Started Dating Bri" :date (jt/local-date 2009 8 14)} 
    {:title "Started Working" :date (jt/local-date 2013 8 1)}
    {:title "Married Bri" :date (jt/local-date 2014 1 25)}
@@ -15,10 +15,10 @@
 
 (def now (jt/local-date)) ; get todays date
 
-(defn calculate-moment-dates [current-date moment-dates]
-  (map #(assoc % :duration (jt/time-between current-date (get % :date) :days)) moment-dates))
+(defn calculate-moment-durations [current-date moments]
+  (map #(assoc % :duration-in-days (jt/time-between current-date (get % :date) :days)) moments))
 
 (defn -main
   []
-  (pp/pprint (calculate-moment-dates now moment-dates)))
+  (pp/pprint (calculate-moment-durations now moments)))
 
