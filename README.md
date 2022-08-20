@@ -1,10 +1,10 @@
 # moments
 
-FIXME: description
+An app to remember the special moments in your life
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Currently a CLI application only and I haven't learnt how to distribute/install as an app yet
 
 ## Usage
 
@@ -18,15 +18,11 @@ FIXME: listing of options this app accepts.
 
 ## Examples
 
-...
+TODO...
 
 ### Bugs
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+None currently known
 
 ## License
 
