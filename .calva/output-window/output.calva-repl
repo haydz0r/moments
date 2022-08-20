@@ -404,3 +404,428 @@ clj꞉moments.core꞉> 
 nil
 clj꞉moments.core꞉> 
 ; nREPL Connection was closed
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date "2009-08-14",
+  :duration-in-days -4754}
+ {:title "Started Working",
+  :date "2013-08-01",
+  :duration-in-days -3306}
+ {:title "Married Bri", :date "2014-01-25", :duration-in-days -3129}
+ {:title "Bought First Home",
+  :date "2014-11-14",
+  :duration-in-days -2836}
+ {:title "Addi Born", :date "2019-03-02", :duration-in-days -1267}
+ {:title "Demi Born", :date "2021-10-01", :duration-in-days -323}
+ {:title "Bought Second Home",
+  :date "2022-09-15",
+  :duration-in-days 26})
+nil
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date "2009-08-14",
+  :duration-in-days -4754}
+ {:title "Started Working",
+  :date "2013-08-01",
+  :duration-in-days -3306}
+ {:title "Married Bri", :date "2014-01-25", :duration-in-days -3129}
+ {:title "Bought First Home",
+  :date "2014-11-14",
+  :duration-in-days -2836}
+ {:title "Addi Born", :date "2019-03-02", :duration-in-days -1267}
+ {:title "Demi Born", :date "2021-10-01", :duration-in-days -323}
+ {:title "Bought Second Home",
+  :date "2022-09-15",
+  :duration-in-days 26})
+nil
+clj꞉moments.core꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/time-between-test
+; Running test: time-between-test…
+; ERROR in moments.core-test/time-between-test (core_deftype.clj:11):
+; Tests whether the difference of two dates are returned as a duration
+; error: java.lang.IllegalArgumentException: No implementation of method: :time-between of protocol: #'java-time.core/KnowsTimeBetween found for class: java.lang.String (core_deftype.clj:11)
+; expected:
+(= (moments.core/time-between "2022-09-01" "2022-08-01") 30)
+; 1 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/time-between-test
+; Running test: time-between-test…
+; ERROR in moments.core-test/time-between-test (core_deftype.clj:7):
+; Tests whether the difference of two dates are returned as a duration
+; error: java.lang.IllegalArgumentException: No implementation of method: :time-between of protocol: #'java-time.core/KnowsTimeBetween found for class: java.lang.String (core_deftype.clj:7)
+; expected:
+(= (moments.core/time-between "2022-09-01" "2022-08-01") 30)
+; 1 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+; Execution error (IllegalArgumentException) at java-time.core/eval743$fn$G (core.clj:101).
+; No implementation of method: :time-between of protocol: #'java-time.core/KnowsTimeBetween found for class: java.lang.String
+clj꞉moments.core꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date "2009-08-14",
+  :duration-in-days -4754}
+ {:title "Started Working",
+  :date "2013-08-01",
+  :duration-in-days -3306}
+ {:title "Married Bri", :date "2014-01-25", :duration-in-days -3129}
+ {:title "Bought First Home",
+  :date "2014-11-14",
+  :duration-in-days -2836}
+ {:title "Addi Born", :date "2019-03-02", :duration-in-days -1267}
+ {:title "Demi Born", :date "2021-10-01", :duration-in-days -323}
+ {:title "Bought Second Home",
+  :date "2022-09-15",
+  :duration-in-days 26})
+nil
+clj꞉moments.core꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/time-between-test
+; Running test: time-between-test…
+; FAIL in moments.core-test/time-between-test (core_test.clj:7):
+; Tests whether the difference of two dates are returned as a duration
+; expected:
+-31
+; actual:
+30
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/time-between-test
+; Running test: time-between-test…
+; 3 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+({:title "Started Dating Bri",
+  :date "2009-08-14",
+  :duration-in-days -4754}
+ {:title "Started Working",
+  :date "2013-08-01",
+  :duration-in-days -3306}
+ {:title "Married Bri", :date "2014-01-25", :duration-in-days -3129}
+ {:title "Bought First Home",
+  :date "2014-11-14",
+  :duration-in-days -2836}
+ {:title "Addi Born", :date "2019-03-02", :duration-in-days -1267}
+ {:title "Demi Born", :date "2021-10-01", :duration-in-days -323}
+ {:title "Bought Second Home",
+  :date "2022-09-15",
+  :duration-in-days 26})
+nil
+clj꞉moments.core꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+nil
+clj꞉moments.core-test꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; FAIL in moments.core-test/enrich-moments-test (form-init11125832159962865891.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 5 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+nil
+clj꞉moments.core-test꞉> 
+#'moments.core-test/time-between-test
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+; actual:
+nil
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: time-between-test…
+; 3 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+(moments.core/enrich-moments [{:title "Test Date 1" :date "2009-08-14"}
+                             {:title "Test Date 2" :date "2050-08-01"}] "2022-01-01")
+({:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439})
+clj꞉moments.core-test꞉> 
+#'moments.core/-main
+clj꞉moments.core꞉> 
+(-main)
+[{:title "Started Dating Bri",
+  :date "2009-08-14",
+  :duration-in-days -4754}
+ {:title "Started Working",
+  :date "2013-08-01",
+  :duration-in-days -3306}
+ {:title "Married Bri", :date "2014-01-25", :duration-in-days -3129}
+ {:title "Bought First Home",
+  :date "2014-11-14",
+  :duration-in-days -2836}
+ {:title "Addi Born", :date "2019-03-02", :duration-in-days -1267}
+ {:title "Demi Born", :date "2021-10-01", :duration-in-days -323}
+ {:title "Bought Second Home",
+  :date "2022-09-15",
+  :duration-in-days 26}]
+nil
+clj꞉moments.core꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running test: enrich-moments-test…
+; FAIL in moments.core-test/enrich-moments-test (core_test.clj:17):
+; Tests whether moments data is enriched with calculated data such as the duration
+; expected:
+[{:title "Test Date 1", :date "2009-08-14", :duration-in-days -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration-in-days 10439}]
+; actual:
+[{:title "Test Date 1", :date "2009-08-14", :duration -4523}
+ {:title "Test Date 2", :date "2050-08-01", :duration 10439}]
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; 5 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Evaluating file: core_test.clj
+#'moments.core-test/enrich-moments-test
+; Running tests for moments.core-test...
+; FAIL in moments.core-test/a-test (core_test.clj:7):
+; FIXME, I fail.
+; expected:
+0
+; actual:
+1
+; 5 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 3
+clj꞉moments.core-test꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.9.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉moments.core꞉> 
+; Jack-in done.
+clj꞉moments.core꞉> 
+; Running all project tests…
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉moments.core꞉> 
+; Syntax error compiling at (c:\Users\GGPC\Documents\Workspace\moments\test\moments\core_test.clj:11:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+#'moments.core-test/enrich-moments-test
+clj꞉moments.core-test꞉> 
+; Running all project tests…
+; 4 tests finished, all passing 👍, ns: 1, vars: 2
+clj꞉moments.core-test꞉> 
