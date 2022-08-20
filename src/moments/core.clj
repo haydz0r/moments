@@ -1,24 +1,19 @@
-(ns moments.core 
-  (:gen-class)
+(ns moments.core
   (:require [java-time :as jt])
-  (:require [clojure.pprint :as pp]))
+  (:require [clojure.pprint :refer [pprint]]))
 
 (def moments 
-  [{:title "Started Dating Bri" :date (jt/local-date 2009 8 14)} 
-   {:title "Started Working" :date (jt/local-date 2013 8 1)}
-   {:title "Married Bri" :date (jt/local-date 2014 1 25)}
-   {:title "Bought First Home" :date (jt/local-date 2014 11 14)}
-   {:title "Addi Born" :date (jt/local-date 2019 3 2)}
-   {:title "Demi Born" :date (jt/local-date 2021 10 1)}
-   {:title "Bought Second Home" :date (jt/local-date 2022 9 15)}
-   ])
+  (read-string (slurp "data/moments.edn")))
 
-(def now (jt/local-date)) ; get todays date
+(def todays-date (jt/local-date)) ;get todays date
 
-(defn calculate-moment-durations [current-date moments]
-  (map #(assoc % :duration-in-days (jt/time-between current-date (get % :date) :days)) moments))
+(defn time-between [todays-date moment-date]
+  (jt/time-between todays-date (jt/local-date moment-date) :days))
+
+(defn enrich-moments [moments todays-date]
+  (map #(assoc % :duration-in-days (time-between todays-date (:date %))) moments))
 
 (defn -main
   []
-  (pp/pprint (calculate-moment-durations now moments)))
+  (pprint (enrich-moments moments todays-date)))
 
