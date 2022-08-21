@@ -16,8 +16,8 @@
           {:title "Test Date 2" :date "2050-08-01"}]]
     
       (is (= 
-           [{:title "Test Date 1" :date "2009-08-14" :duration-in-days -4523}
-           {:title "Test Date 2" :date "2050-08-01" :duration-in-days 10439}]
+           [{:title "Test Date 1" :date "2009-08-14" :duration-in-days -4523 :duration-auto-formatted "12 years 4 months 18 days ago"}
+           {:title "Test Date 2" :date "2050-08-01" :duration-in-days 10439 :duration-auto-formatted "in 28 years 7 months 0 days"}]
            (moments.core/enrich-moments moments-test-data "2022-01-01"))))))
 
 (deftest test-to-show-steve 
