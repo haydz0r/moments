@@ -12,8 +12,9 @@
        (= (.getMonths time-period) 0)
        (= (.getDays time-period) 0)))
 
-(defn auto-format [time-period]
+(defn auto-format 
   "Automatically formats a time period into a years/months/days ago meant to be read by a human"
+  [time-period]
   (if (today? time-period)
     "today"
     (add-tense time-period (str (abs (.getYears time-period)) " years "

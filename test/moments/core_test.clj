@@ -1,4 +1,5 @@
 (ns moments.core-test
+  #_{:clj-kondo/ignore [:refer-all]}
   (:require [clojure.test :refer :all]
             [moments.core :refer :all])
    (:require [java-time :as jt]))
@@ -19,12 +20,6 @@
            [{:title "Test Date 1" :date "2009-08-14" :duration-in-days -4523 :duration-auto-formatted "12 years 4 months 18 days ago"}
            {:title "Test Date 2" :date "2050-08-01" :duration-in-days 10439 :duration-auto-formatted "in 28 years 7 months 0 days"}]
            (moments.core/enrich-moments moments-test-data "2022-01-01"))))))
-
-(deftest test-to-show-steve 
-  (testing "Why does read-string return the data type PersistentList for the date compared to the original type of LocalDate?"
-    (is (= 
-         (type (:date (read-string (slurp "data/moments-test.edn")))) 
-         (type (:date {:title "Test Date" :date (jt/local-date 2009 8 14)}))))))
 
 (deftest test-time-period-formatting 
   (testing "When given a time period, test that it returns the correct human readable breakdown into years/months/days" ;
