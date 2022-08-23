@@ -2,6 +2,17 @@
   (:require [java-time :as jt])
   (:require [clojure.pprint :refer [pprint]]))
 
+(def moments
+  (read-string (slurp "data/moments.edn")))
+
+(def todays-date (str (jt/local-date)))
+
+(defn time-between [todays-date moment-date]
+  (jt/time-between (jt/local-date todays-date) (jt/local-date moment-date) :days))
+
+(defn moment-period [todays-date moment-date]
+  (jt/period (jt/local-date todays-date) (jt/local-date moment-date)))
+
 (defn add-tense [time-period, formatted-time-period]
   (if (.isNegative time-period)
     (str formatted-time-period " ago")
@@ -12,8 +23,8 @@
        (= (.getMonths time-period) 0)
        (= (.getDays time-period) 0)))
 
-(defn auto-format 
-  "Automatically formats a time period into a years/months/days ago meant to be read by a human"
+(defn full-format
+  "Formats a time period into a date that includes years, months and days"
   [time-period]
   (if (today? time-period)
     "today"
@@ -21,21 +32,25 @@
                                 (abs (.getMonths time-period)) " months "
                                 (abs (.getDays time-period)) " days"))))
 
-(defn time-between [todays-date moment-date]
-  (jt/time-between (jt/local-date todays-date) (jt/local-date moment-date) :days))
+(defn auto-format
+  "Automatically formats a date that will only include a time period (years, months and days) if the time period has a value"
+  [moment]
+  "to be implemented...")
 
-(defn moment-period [todays-date moment-date]
-  (jt/period (jt/local-date todays-date) (jt/local-date moment-date)))
+(defmulti format-duration :format)
+
+(defmethod format-duration :full
+ [moment]
+ (full-format (moment-period todays-date (:date moment))))
+
+(defmethod format-duration :auto
+ [moment]
+ (auto-format (moment-period todays-date (:date moment))))
 
 (defn enrich-moments [moments todays-date]
   (mapv #(assoc % 
                 :duration-in-days (time-between todays-date (:date %))
-                :duration-auto-formatted (auto-format (moment-period todays-date (:date %)))) moments))
-
-(def moments
-  (read-string (slurp "data/moments.edn"))) ; not a pure function? how to structure where this goes?
-
-(def todays-date (str (jt/local-date))) ;get todays date. not a pure function? how to structure where this goes?
+                :duration-formatted (format-duration %)) moments))
 
 (defn -main
   [] 
