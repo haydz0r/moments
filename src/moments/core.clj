@@ -30,7 +30,7 @@
 
 (defn auto-format
   "Automatically formats a date that will only include a time period (years, months and days) if the time period has a value"
-  [moment]
+  [_moment]
   "to be implemented...")
 
 (defn format-duration-dispatch [moment todays-date] 
@@ -49,7 +49,7 @@
  (auto-format (moment-period todays-date (:date moment))))
 
 (defmethod format-duration :today
-  [moment todays-date]
+  [_moment _todays-date]
   "today!")
 
 (defn enrich-moments [moments todays-date]
