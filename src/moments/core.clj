@@ -13,44 +13,49 @@
 (defn moment-period [todays-date moment-date]
   (jt/period (jt/local-date todays-date) (jt/local-date moment-date)))
 
-(defn add-tense [time-period, formatted-time-period]
+(defn add-tense [time-period formatted-time-period]
   (if (.isNegative time-period)
     (str formatted-time-period " ago")
     (str "in " formatted-time-period)))
 
-(defn today? [time-period]
-  (and (= (.getYears time-period) 0)
-       (= (.getMonths time-period) 0)
-       (= (.getDays time-period) 0)))
+(defn today? [moment-date todays-date]
+  (= (jt/local-date moment-date) (jt/local-date todays-date)))
 
 (defn full-format
   "Formats a time period into a date that includes years, months and days"
   [time-period]
-  (if (today? time-period)
-    "today"
     (add-tense time-period (str (abs (.getYears time-period)) " years "
                                 (abs (.getMonths time-period)) " months "
-                                (abs (.getDays time-period)) " days"))))
+                                (abs (.getDays time-period)) " days")))
 
 (defn auto-format
   "Automatically formats a date that will only include a time period (years, months and days) if the time period has a value"
   [moment]
   "to be implemented...")
 
-(defmulti format-duration :format)
+(defn format-duration-dispatch [moment todays-date] 
+  (cond 
+    (today? (:date moment) todays-date) :today
+    :else (:format moment)))
+
+(defmulti format-duration format-duration-dispatch)
 
 (defmethod format-duration :full
- [moment]
+ [moment todays-date]
  (full-format (moment-period todays-date (:date moment))))
 
 (defmethod format-duration :auto
- [moment]
+ [moment todays-date]
  (auto-format (moment-period todays-date (:date moment))))
+
+(defmethod format-duration :today
+  [moment todays-date]
+  "today!")
 
 (defn enrich-moments [moments todays-date]
   (mapv #(assoc % 
                 :duration-in-days (time-between todays-date (:date %))
-                :duration-formatted (format-duration %)) moments))
+                :duration-formatted (format-duration % todays-date)) moments))
 
 (defn -main
   [] 

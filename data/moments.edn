@@ -4,5 +4,5 @@
 {:title "Bought First Home" :date "2014-11-14" :format :full}
 {:title "Addi Born" :date "2019-03-02" :format :full}
 {:title "Demi Born" :date "2021-10-01" :format :auto}
- {:title "Today!" :date "2022-08-22" :format :auto}
+{:title "Today!" :date "2022-08-23" :format :auto}
 {:title "Bought Second Home" :date "2022-09-15" :format :auto}]
