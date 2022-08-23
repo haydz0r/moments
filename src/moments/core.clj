@@ -3,7 +3,8 @@
   (:require [clojure.pprint :refer [pprint]]))
 
 (def moments
-  (read-string (slurp "data/moments.edn")))
+  (-> (slurp "data/moments.edn")
+  (read-string)))
 
 (def todays-date (str (jt/local-date)))
 
