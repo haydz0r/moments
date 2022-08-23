@@ -29,9 +29,12 @@
                                 (abs (.getDays time-period)) " days")))
 
 (defn auto-format
-  "Automatically formats a date that will only include a time period (years, months and days) if the time period has a value"
-  [_moment]
-  "to be implemented...")
+  "Formats a date that will only include a time period (years, months and days) if the time period has a value"
+  [time-period]
+  (cond 
+    (and (= (abs (.getYears time-period)) 0) (= (abs (.getMonths time-period)) 0)) (str (abs (.getDays time-period)) " days")
+    (and (= (abs (.getYears time-period)) 0) (> (abs (.getMonths time-period)) 0)) (str (abs (.getMonths time-period)) " months " (abs (.getDays time-period)) " days")
+    :else (full-format time-period)))
 
 (defn format-duration-dispatch [moment todays-date] 
   (cond 
