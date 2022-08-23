@@ -3,7 +3,7 @@
  {:title "Married Bri" :date "2014-01-25" :format :full}
  {:title "Bought First Home" :date "2014-11-14" :format :full}
  {:title "Addi Born" :date "2019-03-02" :format :full} 
- {:title "Demi Born" :date "2021-10-01" :format :auto}
+ {:title "Demi Born" :date "2021-10-01" :format :full}
  {:title "Today!" :date "2022-08-24" :format :auto}
  {:title "Bought Second Home" :date "2022-09-15" :format :auto}
  {:title "TEST Auto - Days Only" :date "2022-08-10" :format :auto}
