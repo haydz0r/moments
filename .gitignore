@@ -13,3 +13,6 @@ pom.xml.asc
 .hg/
 .clj-kondo/
 .calva/
+/.idea/
+/moments.iml
+/.cpcache/

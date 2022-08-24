@@ -18,18 +18,18 @@
    "month" (.getMonths time-period)
    "day" (.getDays time-period)})
 
-(defn auto-format 
+(defn auto-format
   "Formats a date that will only include a time period (years, months and days) if the time period has a value"
   [format moment-period units-of-time-for-period]
-  (->> (reduce (fn [accumulator unit-mapping]
+  (->> units-of-time-for-period
+       (reduce (fn [accumulator unit-mapping]
             (let [absolute-duration (abs (second unit-mapping))
                   unit-of-time (first unit-mapping)]
               (cond
                 (and (zero? absolute-duration) (= format :auto)) accumulator
                 (= 1 absolute-duration) (conj accumulator (str absolute-duration " " unit-of-time " "))
                 :else (conj accumulator (str absolute-duration " " unit-of-time "s ")))))
-          []
-          units-of-time-for-period)
+          [])
        (apply str)
        (trim)
        (today?)

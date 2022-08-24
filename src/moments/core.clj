@@ -16,10 +16,21 @@
 (defn process-moments [moments todays-date]
   (mapv #(enrich-moments % todays-date) moments))
 
-(defn -main
+(defn main'
+  "pure driver for logic"
   []
   (let [moments (load-moments-from-file "data/moments.edn") 
         todays-date (str (jt/local-date))]
-    (pprint (process-moments moments todays-date)))
-  )
+    (process-moments moments todays-date)))
 
+(defn -main
+  "CLI entry point with pprint side-effect to stdout"
+  []
+  (pprint (main')))
+
+(comment
+
+  (do (main') nil)
+  (-main)
+
+  )

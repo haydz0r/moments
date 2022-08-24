@@ -1,0 +1,5 @@
+{:paths   ["src" "data" #_"resources"]
+ :deps    {org.clojure/clojure                 {:mvn/version "1.11.1"}
+           clojure.java-time/clojure.java-time {:mvn/version "0.3.2"}}
+ :aliases {:test-local {:extra-paths ["test"]
+                        :extra-deps  {vvvvalvalval/scope-capture {:mvn/version "0.3.1"}}}}}
