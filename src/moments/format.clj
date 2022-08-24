@@ -35,7 +35,7 @@
        (today?)
        (add-tense moment-period)))
 
-(defn format-duration-dispatch [moment todays-date]
+(defn format-duration-dispatch [todays-date moment]
   (cond
     (c/today? (:date moment) todays-date) :auto-or-full
     :else :auto-or-full))
@@ -43,13 +43,13 @@
 (defmulti format-duration format-duration-dispatch)
 
 (defmethod format-duration :auto-or-full
-  [moment todays-date] 
+  [todays-date moment] 
   (let [moment-period (c/moment-period todays-date (:date moment))]
     (->> (get-units-of-time moment-period)
          (auto-format (:format moment) moment-period))))
 
 (defmethod format-duration :today
-  [_moment _todays-date]
+  [_todays-date _moment]
   "today!")
 
 

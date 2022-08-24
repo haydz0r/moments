@@ -7,7 +7,7 @@
 (defn moment-period [todays-date moment-date]
   (jt/period (jt/local-date todays-date) (jt/local-date moment-date)))
 
-(defn today? [moment-date todays-date]
+(defn today? [todays-date moment-date]
   (= (jt/local-date moment-date) (jt/local-date todays-date)))
 
 

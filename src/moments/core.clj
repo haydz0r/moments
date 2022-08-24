@@ -10,8 +10,9 @@
 
 (defn enrich-moments [moment todays-date]
   (assoc moment
-          :duration-in-days (c/time-between todays-date (:date moment))
-          :duration-formatted (f/format-duration moment todays-date)))
+         :duration-in-days (c/time-between todays-date (:date moment)) 
+         :period (jt/as-map (c/moment-period todays-date (:date moment)))
+         :period-formatted (f/format-duration todays-date moment)))
 
 (defn process-moments [moments todays-date]
   (mapv #(enrich-moments % todays-date) moments))
