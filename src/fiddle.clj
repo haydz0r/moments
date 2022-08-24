@@ -9,3 +9,7 @@
 
 (-> "abc"
     (str/replace "a" "z"))
+
+#_#_ (sc.api/spy) 
+(use 'sc.api)
+;https://github.com/vvvvalvalval/scope-capture
