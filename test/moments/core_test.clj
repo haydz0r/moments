@@ -1,5 +1,4 @@
-(ns moments.core-test
-  #_{:clj-kondo/ignore [:refer-all]}
+(ns moments.core-test 
   (:require [clojure.test :refer [deftest testing is]]
             [moments.calc :as calc]
             [moments.format :as format]
