@@ -37,7 +37,7 @@
 
 (defn format-duration-dispatch [moment todays-date]
   (cond
-    (c/today? (:date moment) todays-date) :auto-or-full;:today
+    (c/today? (:date moment) todays-date) :auto-or-full
     :else :auto-or-full))
 
 (defmulti format-duration format-duration-dispatch)
