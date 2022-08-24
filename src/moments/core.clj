@@ -20,7 +20,7 @@
 (defn main'
   "pure driver for logic"
   []
-  (let [moments (load-moments-from-file "data/moments.edn") 
+  (let [moments (load-moments-from-file "resources/moments.edn") 
         todays-date (str (jt/local-date))]
     (process-moments moments todays-date)))
 
