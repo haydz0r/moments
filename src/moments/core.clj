@@ -12,7 +12,8 @@
   (assoc moment
          :duration-in-days (c/time-between todays-date (:date moment)) 
          :period (jt/as-map (c/moment-period todays-date (:date moment)))
-         :period-formatted (f/format-duration todays-date moment)))
+         :formatted-date (jt/format "dd MMM YYYY" (jt/local-date(:date moment)))
+         :formatted-period (f/format-duration todays-date moment)))
 
 (defn process-moments [moments todays-date]
   (mapv #(enrich-moments % todays-date) moments))
@@ -33,5 +34,7 @@
 
   (do (main') nil)
   (-main)
+
+  (jt/format "dd MMM YYYY" (jt/local-date "2022-01-01"))
 
   )

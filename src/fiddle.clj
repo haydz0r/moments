@@ -12,4 +12,8 @@
 
 #_#_ (sc.api/spy) 
 (use 'sc.api)
-;https://github.com/vvvvalvalval/scope-capture
+; scope-capture repo: https://github.com/vvvvalvalval/scope-capture
+
+; java-time repo: https://github.com/dm3/clojure.java-time
+
+; clj-kondo repo: https://github.com/clj-kondo/clj-kondo/blob/master/doc/linters.md#misplaced-docstring 
